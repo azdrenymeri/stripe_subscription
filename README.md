@@ -1,24 +1,7 @@
-# README
+# Stripe Subscription
+A simple Stripe subscription project.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### How to run it 
+1. Setup your db credentials on `config/database.yml`
+2. `rails db:create db:migrate`
+3. Finally `rails s`
