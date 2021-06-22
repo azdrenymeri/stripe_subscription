@@ -33,7 +33,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       # t.datetime :locked_at
 
       t.string :customer_id
-      t.string :product_id
+      t.string :price_id
       t.string :subscription_id
 
       t.timestamps null: false

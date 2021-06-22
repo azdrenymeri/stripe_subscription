@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_06_15_125823) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "customer_id"
-    t.string "product_id"
+    t.string "price_id"
     t.string "subscription_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

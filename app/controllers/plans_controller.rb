@@ -16,7 +16,8 @@ class PlansController < ApplicationController
     })
 
     current_user.subscription_id = subscription.id
-    current_user.save!
+    current_user.price_id = params[:price_id]
+    current_user.save
 
     redirect_to checkout_plan_path(subscription.latest_invoice.payment_intent.client_secret)
   end
