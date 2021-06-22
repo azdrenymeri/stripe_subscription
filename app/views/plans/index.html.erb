@@ -1,0 +1,23 @@
+<div class="main" data-controller="plans">
+  <h2 style="text-align:center">Pricing</h2>
+  <p style="text-align:center">Please select your package</p>
+
+  <%= form_tag plans_path, method: :post, data: {target:"plans.form"} do %>
+    <%= hidden_field_tag "price_id", nil, data: {target: "plans.selectedPrice"} %>
+    
+    <% @prices.each do |price| %>
+      <div class="columns">
+        <ul class="price">
+          <li class="header"> <%= price.product.name %> </li>
+          <li class="grey"><%= number_to_currency(price.unit_amount / 100, unit: "€ ") %> / month </li>
+          <li>Your text here</li>
+          <li>Your text here</li>
+          <li>Your text here</li>
+          <li>Your text here</li>
+          <li class="grey"><a href="#" class="button" data-action="click->plans#handleSubmit" id="<%= price.id%>">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+  <% end %>
+</div>

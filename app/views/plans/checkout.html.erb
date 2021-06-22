@@ -1,0 +1,20 @@
+<div class="main" data-controller="checkout">
+  <h2 style="text-align:center">Checkout</h2>
+  <p style="text-align:center">Please enter your card details</p>
+
+  <%= form_tag root_url, method: :get, data: {target:"checkout.form"}, class: "card center", style: "width: 33%" do %>
+    <%= hidden_field_tag "client_secret", @client_secret, data: {target: "checkout.clientSecret"} %>
+    <div>
+      <%= label_tag "email" %>
+      <%= email_field_tag "email",nil, class: "input", data:{target: "checkout.email"} %>
+    <div>
+    <div id="card-element" data-target="checkout.cardElement">
+    </div>
+    <div id="card-element-errors" data-target="checkout.cardError" role="alert"></div>
+    <div>
+      <button class="button" data-action="click->checkout#handleCheckout">
+        Subscribe
+      </button>
+    </div>
+  <% end %>
+</div>
